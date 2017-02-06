@@ -1,0 +1,29 @@
+﻿<Page
+    x:Class="ThatNumbersGame.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:ThatNumbersGame"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <TextBlock x:Name="lblTop" HorizontalAlignment="Center" Margin="0,1,0,50" TextWrapping="Wrap" VerticalAlignment="Top" TextAlignment="Center" RelativePanel.Above="btnNewGame" RelativePanel.AlignVerticalCenterWith="" RelativePanel.AlignHorizontalCenterWith="btnNewGame">
+            <Run FontSize="50" Text="That Numbers Game"/>
+            <LineBreak/>
+            <Run FontSize="20" Text="brought to you by JoshFacts™"/>
+            <LineBreak/>
+            <LineBreak/>
+            <Run Text="A number will be displayed for 100ms" />
+            <LineBreak/>
+            <Run Text="You must remember it, then enter it" />
+            <LineBreak/>
+            <Run Text="For each correct answer, another digit will be added" />
+        </TextBlock>
+        <Button x:Name="btnNewGame" Content="New game" Margin="0,0,0,0" VerticalAlignment="Top" Click="btnNewGame_onClick" RelativePanel.AlignHorizontalCenterWithPanel="True" RelativePanel.AlignVerticalCenterWithPanel="True"/>
+        <TextBlock x:Name="lblStats" HorizontalAlignment="Center" Margin="0,50,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RelativePanel.Below="btnNewGame" RelativePanel.AlignHorizontalCenterWith="btnNewGame">
+            <Run Text="Stats" FontWeight="Bold" />
+        </TextBlock>
+
+    </RelativePanel>
+</Page>
